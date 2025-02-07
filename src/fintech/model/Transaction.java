@@ -1,4 +1,4 @@
-package fintech.model;
+package fintech.model; 
 import fintech.model.*;
 /**
  * @author 12S23041 - Lisbeth Panjaitan

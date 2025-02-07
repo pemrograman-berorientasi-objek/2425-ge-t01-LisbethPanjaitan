@@ -4,37 +4,51 @@ package fintech.model;
  * @author 12S23041 - Lisbeth Panjaitan 
  * @author 12S23021 - Eunike Purba
  */
-public class Account{
+public class Account {
+    private String owner;
+    private String accountName;
+    private double balance;
 
-    private final String owner;
-    private final String name;
-    private double balance = 0.0;
-
-    public Account(String _owner, String _name)
-    {
-      this.owner = _owner;
-      this.name = _name;
+    // Constructor
+    public Account(String owner, String accountName) {
+        this.owner = owner;
+        this.accountName = accountName;
+        this.balance = 0.0; // Initial balance is 0
     }
 
-
-    public String getName()
-    {
-      return name;
+    // Getter for owner
+    public String getOwner() {
+        return owner;
     }
 
-    public String getOwner()
-    {
-      return owner;
+    // Getter for accountName
+    public String getAccountName() {
+        return accountName;
     }
 
-    public double getBalance()
-    {
-      return balance;
+    // Getter for balance
+    public double getBalance() {
+        return balance;
     }
 
+    // Method to deposit money
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    // Method to withdraw money
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    // Override toString method to display account information
     @Override
-    public String toString()
-    {
-      return this.owner + "|" + this.name + "|" + this.balance;
+    public String toString() {
+        return accountName + "|" + owner + "|" + balance;
     }
-  }
+}
+
