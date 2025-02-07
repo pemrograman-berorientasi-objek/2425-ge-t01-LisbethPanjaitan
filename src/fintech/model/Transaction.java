@@ -1,11 +1,28 @@
 package fintech.model;
-
+import fintech.model.*;
 /**
- * @author NIM Nama
- * @author NIM Nama
+ * @author 12S23041 - Lisbeth Panjaitan
+ * @author 12S23021 - Eunike Purba
  */
 public class Transaction {
-
-    // class definition
-
-}
+    private final int idTransaction = 1;
+    private final String owner;
+    private final double amount;
+    private final String posted_at;
+    private final String note;
+  
+    public Transaction(String _owner, double _amount, String _posted_at, String _note)
+    {
+      this.owner = _owner;
+      this.amount = _amount;
+      this.posted_at = _posted_at;
+      this.note = _note;
+    }
+  
+    @Override
+    public String toString()
+    {
+      return this.idTransaction + "|" + this.owner + "|" + this.amount + "|" + this.posted_at + "|" + this.note + "|" + this.amount;
+    }
+  
+  }
