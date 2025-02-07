@@ -1,5 +1,5 @@
 package fintech.model; 
-import fintech.model.*; 
+import fintech.model.*;
 /**
  * @author 12S23041 - Lisbeth Panjaitan
  * @author 12S23021 - Eunike Purba
