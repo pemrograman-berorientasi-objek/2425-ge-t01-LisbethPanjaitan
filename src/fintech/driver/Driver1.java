@@ -1,4 +1,4 @@
-package fintech.driver; 
+package fintech.driver;
 
 import java.util.Scanner;
 import fintech.model.*;
